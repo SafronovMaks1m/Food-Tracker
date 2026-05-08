@@ -1,0 +1,2 @@
+class RedisNotificationsException(Exception):
+    pass

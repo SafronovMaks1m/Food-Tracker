@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "api_service"
+		},
+		{
+			"path": "ai_service"
+		}
+	],
+	"settings": {}
+}
