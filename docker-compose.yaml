@@ -129,7 +129,7 @@ services:
       - .env
     deploy:
       replicas: 2
-    command: python src/rabbitmq_service/consumer.py
+    command: python -m src.rabbitmq_service.consumer
     depends_on:
       migrations:
         condition: service_completed_successfully
@@ -152,7 +152,7 @@ services:
       - ./ai_service:/usr/src/app
     environment:
       - PYTHONPATH=/usr/src/app
-    command: python src/consumer.py
+    command: python -m src.consumer
     depends_on:
       minio:
         condition: service_started

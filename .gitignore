@@ -29,3 +29,5 @@ temp/
 Thumbs.db
 
 api_service/helper.py
+
+ai_service/src/services/food_recognition_service/models/

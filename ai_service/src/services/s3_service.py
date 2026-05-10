@@ -11,12 +11,11 @@ class S3Client:
         }
         self.session = get_session()
         
-    async def download_image(self, client, key: str, bucket: str, path: str):
+    async def download_image(self, client, key: str, bucket: str):
         resp = await client.get_object(Bucket=bucket, Key=key)
         async with resp['Body'] as stream:
             data = await stream.read()
-            async with aiofiles.open(file=path, mode="wb") as file:
-                await file.write(data)
+            return data
                     
 
 s3_client = S3Client(
