@@ -12,9 +12,7 @@ from src.rabbitmq_service.rabbitmq_client import rabbitmq_client
 from loguru import logger
 from datetime import datetime, timezone, timedelta
 
-router = APIRouter(
-    prefix="/analysis"
-)
+router = APIRouter()
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def analyze_image(
